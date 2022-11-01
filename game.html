@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="game.css" />
+    <title>SketchPad</title>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="title"><h1>SketchPad</h1></div>
+      
+      <div>
+          <input
+            type="text"
+            placeholder="Size of Board"
+            value="16"
+            onchange="changeSize(this.value)"
+          />
+          <button>Set Size</button>
+        </div>
+        <div class="error">Input must be between 2 and 100</div>
+      
+      <div class="mode">Mode: Coloring</div>
+      <div class="content">
+        <div class="board"></div>
+        <div class="buttons">
+          <button class="blackButton" onclick="changeColor('black')">
+            Black
+          </button>
+          <button class="erasorButton" onclick="changeColor('white')">
+            Erasor
+          </button>
+          <button class="randomButton" onclick="changeColor('random')">
+            Random
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="game.js"></script>
+</html>
